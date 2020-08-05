@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import ItemGrid from './ItemGrid';
 import GlobalStyles from './GlobalStyles';
+import Cart from './cart/Cart';
 
 const App = () => {
   return (
@@ -14,13 +15,19 @@ const App = () => {
       <ItemGridWrapper>
         <ItemGrid />
       </ItemGridWrapper>
-
+      <CartWrapper>
+        <Cart />
+      </CartWrapper>
       <GlobalStyles />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+  display: grid;
+  grid-template-areas:
+  'header sidebar'
+  'main sidebar';
   position: relative;
 `;
 
