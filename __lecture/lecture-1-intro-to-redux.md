@@ -153,7 +153,9 @@ Our state shape:
 */
 
 const FridgeContents = () => {
-  const fridgeItems = /* TODO */
+  const fridgeItems = useSelector(state => {
+    return state.fridge;
+  })
 
   return (
     <div>
@@ -197,7 +199,7 @@ const App = () => {
   // We're going to watch OUR favourite movie,
   // in our BOYFRIEND's favourite genre.
   // (Terror at Jarry Park)
-  const movie = /* TODO */
+  const movie = useSelector
 
   return (
     <div>
