@@ -10,6 +10,10 @@ const cartReducer = (state = initialState, action) => {
                     quantity: 1
                 }
             }
+        case 'REMOVE_ITEM':
+            const copyState = {...state}
+            delete copyState[action.item.id];
+            return copyState;    
         default:
             return state;
     }
